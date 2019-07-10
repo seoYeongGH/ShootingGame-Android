@@ -25,7 +25,7 @@ public class Enemy_2 extends Enemy {//복어
         if(level==EASY) {
             hp = 20;
             score = 20;
-            speed = 5f;
+            speed = 6f;
 
             shootingTime = 1500;
         }
