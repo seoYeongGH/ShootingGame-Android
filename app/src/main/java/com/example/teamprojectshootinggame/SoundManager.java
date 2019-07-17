@@ -30,7 +30,15 @@ public class SoundManager {
         m_Sound_BackGround.setLooping(true);
     } //배경음 반복 재생
 
-
+    protected void stopMediaPlayer(){
+        if(m_Sound_BackGround != null) {
+            try{
+                m_Sound_BackGround.release();
+            }catch (Exception e ){
+                e.printStackTrace();
+            }
+        }
+    }
     public void addMusic(int _musicID)
     {
         m_Sound_BackGround = MediaPlayer.create(m_Activity,_musicID);

@@ -2,7 +2,6 @@ package com.example.teamprojectshootinggame;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.media.SoundPool;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.SurfaceView;
@@ -34,6 +33,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
         SoundManager.getInstance().addSound(4,R.raw.shot);
         SoundManager.getInstance().addSound(5,R.raw.enemykill);
         SoundManager.getInstance().addSound(6,R.raw.gameover);
+
         SoundManager.getInstance().addMusicLoop(R.raw.background);
 
         pushState(new StartState());//어플리케이션 시작
