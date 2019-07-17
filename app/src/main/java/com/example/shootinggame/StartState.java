@@ -1,6 +1,7 @@
 package com.example.shootinggame;
 
 
+import android.content.Intent;
 import android.graphics.Canvas;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -53,6 +54,9 @@ public class StartState extends AppCompatActivity implements IState {
     public void onStoryClicked(View view){
         SoundManager.getInstance().play(1);
         AppManager.getInstance().getGameView().pushState(new StoryState());
+
+        Intent intent = new Intent(getApplicationContext(),StoryState.class);
+        startActivity(intent);
     }
 
     public void onStartClicked(View view){
